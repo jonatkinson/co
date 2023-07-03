@@ -54,7 +54,7 @@ fi
 # Loop through the organizations and try to clone the repository
 for ORG in $GITHUB_ORGS; do
   echo "Trying to clone from organization: $ORG"
-  git clone $CLONE_OPTIONS "https://github.com/$ORG/$REPO_NAME.git" && exit 0
+  git clone $CLONE_OPTIONS "git@github.com:$ORG/$REPO_NAME.git" && exit 0
 done
 
 echo "Error: Repository not found in the configured organizations."
